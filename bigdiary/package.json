@@ -1,0 +1,32 @@
+{
+  "name": "bigdiary",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "16.6.1",
+    "react-native": "0.57.7",
+    "react-native-vector-icons": "^6.3.0",
+    "react-navigation": "^2.9.0"
+  },
+  "devDependencies": {
+    "babel-jest": "24.1.0",
+    "jest": "24.1.0",
+    "metro-react-native-babel-preset": "0.53.0",
+    "react-test-renderer": "16.6.1",
+    "babel-preset-react-native": "4.0.0",
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
