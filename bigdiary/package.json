@@ -7,11 +7,17 @@
     "test": "jest"
   },
   "dependencies": {
+    "md5": "^2.2.1",
+    "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "16.6.1",
     "react-native": "0.57.7",
+    "react-native-datepicker": "^1.7.2",
+    "react-native-keyboard-aware-scroll-view": "^0.8.0",
+    "react-native-smooth-pincode-input": "^1.0.3",
     "react-native-vector-icons": "^6.3.0",
-    "react-navigation": "^2.9.0"
+    "react-navigation": "^2.9.0",
+    "vasern": "^0.3.1"
   },
   "devDependencies": {
     "babel-jest": "24.1.0",
