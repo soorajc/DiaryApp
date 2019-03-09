@@ -7,7 +7,6 @@ import { StackActions, NavigationActions } from 'react-navigation';
 import PropTypes from 'prop-types';
 import {
   View,
-  Image,
   AsyncStorage,
   Text,
 } from 'react-native';
@@ -19,23 +18,23 @@ export default class SplashScreen extends Component<Props> {
 
   componentDidMount() {
     const interval = 2000;
-    // setTimeout(() => this.launchScreen(), interval);
+    setTimeout(() => this.launchScreen(), interval);
   }
 
   launchScreen() {
-    AsyncStorage.getItem('loginStatus', (err, result) => {
+    AsyncStorage.getItem('pin', (err, result) => {
       if (result) {
-        this.transitionHandler('Home');
+        this.transitionHandler(true, result);
       } else {
-        this.transitionHandler('OnBoardingV1');
+        this.transitionHandler(false, '');
       }
     });
   }
 
-  transitionHandler(key) {
+  transitionHandler(pinSet, value) {
     const resetAction = StackActions.reset({
       index: 0,
-      actions: [NavigationActions.navigate({ routeName: key })],
+      actions: [NavigationActions.navigate({ routeName: 'Login', params: { pinSet: pinSet, pin: value } })],
     });
     this.props.navigation.dispatch(resetAction);
   }
